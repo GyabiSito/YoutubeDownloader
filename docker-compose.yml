@@ -32,8 +32,10 @@ services:
     restart: unless-stopped
 
     networks:
-      - yutu
-      - public
+      yutu:
+      public:
+        aliases:
+          - yutu-app
 
 networks:
   yutu:
